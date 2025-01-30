@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://28g1deb6hq8j"]
+
+[ext_resource type="Texture2D" uid="uid://o4ixwm062r62" path="res://assets/sprites/cover2.png" id="1_07ien"]
+[ext_resource type="Script" path="res://scenes/ui/main_menu.gd" id="1_jkpuh"]
+[ext_resource type="FontFile" uid="uid://x1jl1dlx1iiw" path="res://assets/fonts/Kenney Mini Square Mono.ttf" id="2_p5sou"]
+[ext_resource type="FontFile" uid="uid://b85f3xx6yqty8" path="res://assets/fonts/Kenney Mini.ttf" id="3_jo5s1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6i1f6"]
+font = ExtResource("2_p5sou")
+font_size = 48
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jkpuh")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_07ien")
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="BG/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SPOILED"
+label_settings = SubResource("LabelSettings_6i1f6")
+horizontal_alignment = 1
+
+[node name="Play Button" type="Button" parent="BG/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_jo5s1")
+theme_override_font_sizes/font_size = 24
+text = "Play"
+
+[node name="Settings Button" type="Button" parent="BG/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_jo5s1")
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="Quit Button" type="Button" parent="BG/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_jo5s1")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[connection signal="pressed" from="BG/MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="BG/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="BG/MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
