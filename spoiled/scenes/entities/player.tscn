@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b1b130yvqsomt"]
 
 [ext_resource type="Texture2D" uid="uid://drk6ho1etx7kc" path="res://assets/sprites/tilemap-characters.png" id="1_5e271"]
-[ext_resource type="Script" path="res://scenes/entities/player.gd" id="1_g5x3m"]
+[ext_resource type="Script" uid="uid://bt51ysbyixd2t" path="res://scenes/entities/player.gd" id="1_g5x3m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1xsoy"]
 radius = 20.0
@@ -78,10 +78,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c2d77"]
 _data = {
-"Idle": SubResource("Animation_oyc7i"),
-"RESET": SubResource("Animation_47y5v"),
-"jumping": SubResource("Animation_1uf7s"),
-"running": SubResource("Animation_13dws")
+&"Idle": SubResource("Animation_oyc7i"),
+&"RESET": SubResource("Animation_47y5v"),
+&"jumping": SubResource("Animation_1uf7s"),
+&"running": SubResource("Animation_13dws")
 }
 
 [node name="Player" type="CharacterBody2D"]

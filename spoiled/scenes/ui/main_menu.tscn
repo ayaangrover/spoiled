@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://28g1deb6hq8j"]
 
 [ext_resource type="Texture2D" uid="uid://o4ixwm062r62" path="res://assets/sprites/cover2.png" id="1_07ien"]
-[ext_resource type="Script" path="res://scenes/ui/main_menu.gd" id="1_jkpuh"]
+[ext_resource type="Script" uid="uid://0dicleu6k82v" path="res://scenes/ui/main_menu.gd" id="1_jkpuh"]
 [ext_resource type="FontFile" uid="uid://x1jl1dlx1iiw" path="res://assets/fonts/Kenney Mini Square Mono.ttf" id="2_p5sou"]
 [ext_resource type="FontFile" uid="uid://b85f3xx6yqty8" path="res://assets/fonts/Kenney Mini.ttf" id="3_jo5s1"]
 
@@ -61,15 +61,6 @@ theme_override_fonts/font = ExtResource("3_jo5s1")
 theme_override_font_sizes/font_size = 24
 text = "Play"
 
-[node name="Settings Button" type="Button" parent="BG/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(130, 40)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("3_jo5s1")
-theme_override_font_sizes/font_size = 24
-text = "Settings"
-
 [node name="Quit Button" type="Button" parent="BG/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(130, 40)
 layout_mode = 2
@@ -80,5 +71,4 @@ theme_override_font_sizes/font_size = 24
 text = "Quit"
 
 [connection signal="pressed" from="BG/MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="BG/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="BG/MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://e4orma30h3e8"]
+
+[ext_resource type="Script" uid="uid://ct1agb3laet33" path="res://scenes/ui/winscreen.gd" id="1_2ap7g"]
+[ext_resource type="FontFile" uid="uid://x1jl1dlx1iiw" path="res://assets/fonts/Kenney Mini Square Mono.ttf" id="1_2880n"]
+[ext_resource type="FontFile" uid="uid://b85f3xx6yqty8" path="res://assets/fonts/Kenney Mini.ttf" id="2_2ap7g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vc40x"]
+font = ExtResource("1_2880n")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_e2n2s"]
+font = ExtResource("2_2ap7g")
+font_size = 24
+
+[node name="winscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2ap7g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 640.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 30.0
+offset_right = 447.0
+offset_bottom = 90.0
+text = "YOU WIN!"
+label_settings = SubResource("LabelSettings_vc40x")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = 120.0
+offset_right = 623.0
+offset_bottom = 332.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "By Ayaan Grover
+
+If you enjoyed it, please leave a star at
+github.com/ayaangrover/spoiled!"
+label_settings = SubResource("LabelSettings_e2n2s")
+horizontal_alignment = 1
+
+[node name="StatsLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = 275.0
+offset_right = 621.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "eedeewwedewew"
+label_settings = SubResource("LabelSettings_e2n2s")
+horizontal_alignment = 1

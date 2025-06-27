@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdb6nse1bltac"]
+
+[ext_resource type="Script" uid="uid://vqpra4c6xilr" path="res://scenes/ui/cutscene.gd" id="1_1xchk"]
+[ext_resource type="FontFile" uid="uid://x1jl1dlx1iiw" path="res://assets/fonts/Kenney Mini Square Mono.ttf" id="1_2ch7k"]
+[ext_resource type="FontFile" uid="uid://b85f3xx6yqty8" path="res://assets/fonts/Kenney Mini.ttf" id="2_m8h56"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qquq6"]
+font = ExtResource("1_2ch7k")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_ewjsj"]
+font = ExtResource("2_m8h56")
+font_size = 24
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1xchk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 640.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 30.0
+offset_right = 447.0
+offset_bottom = 90.0
+text = "SPOILED"
+label_settings = SubResource("LabelSettings_qquq6")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = 120.0
+offset_right = 623.0
+offset_bottom = 332.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Everyone left.
+
+They said the green lands were safe.
+
+But they forgot me."
+label_settings = SubResource("LabelSettings_ewjsj")
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
