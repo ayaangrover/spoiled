@@ -11,6 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player":  # Or use `body.is_in_group("player")` if grouped
+	if body.name == "Player": 
 		print("Player touched spikes!")
-		body.die(Vector2(55,-42))  # Call your player's death function
+		body.die(Vector2(55,-42))
